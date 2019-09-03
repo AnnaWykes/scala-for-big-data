@@ -1,0 +1,24 @@
+{
+  "scriptFile": "ScalaFunction.jar",
+  "entryPoint": "Function.run",
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "name": "req",
+      "webHookType" : "NONE",
+      "direction": "in",
+      "authLevel": "anonymous",
+      "methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "type": "http",
+      "name": "$return",
+      "direction": "out"
+    }
+  ]
+}
+
+
