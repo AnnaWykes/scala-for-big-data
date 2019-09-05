@@ -28,12 +28,13 @@ class Function {
     // Parse query parameter
    // val query: String = request.getQueryParameters.get("name")
     val body: String = request.getBody.orElse("error")
+    println(body)
     if (body == "error") {
       request
         .createResponseBuilder(HttpStatus.BAD_REQUEST)
         .body("Please pass a request body")
         .build()
-    } else {
+    } else { 
       val parser = new Parser()
       val result = parser(body)
       request

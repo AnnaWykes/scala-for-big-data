@@ -15,28 +15,21 @@ class ParseTest extends FunSpec with Matchers {
     }
 
 
-   // it("fails if employee node is missing") {
-   //   parse("<employee/>").left.get.reason should
-    //    startWith("Could not find element: Cannot find unique child")
-   // }
+   it("fails if lastname node is missing") {
+     parse("<employee/>").left.get.reason should
+       startWith("Could not find element: Cannot find unique child")
+   }
+
+   it("fails if firstname node is missing") {
+    parse("<employee/>").left.get.reason should
+      startWith("Could not find element: Cannot find unique child")
+  }
+
+  it("fails if age node is missing") {
+    parse("<employee/>").left.get.reason should
+      startWith("Could not find element: Cannot find unique child")
+  }
 
   }
-//
-//    it("fails if order code is missing") {
-//      parse("<paymentService><notify><orderStatusEvent/></notify></paymentService>").left.get.reason should
-//        startWith("Could not find element: Cannot find unique child")
-//    }
-//
-//    it("fails if payment node is missing") {
-//      val xml =
-//        """<paymentService>
-//          |  <notify>
-//          |    <orderStatusEvent orderCode="20190101120000-ref"/>
-//          |  </notify>
-//          |</paymentService>""".stripMargin
-//      parse(xml).left.get.reason should startWith(
-//        "Could not find element: Cannot find unique child"
-//      )
-    //}
- // }
+
 }
