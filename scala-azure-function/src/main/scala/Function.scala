@@ -11,11 +11,6 @@ import scala.collection.JavaConversions._
 
 class Function {
 
-  /**
-    * This function listens at endpoint "/api/ScalaFunction". Two ways to invoke it using "curl" command in bash:
-    * 1. curl -d "HTTP Body" {your host}/api/ScalaFunction
-    * 2. curl {your host}/api/ScalaFunction?name=HTTP%20Query
-    */
   @FunctionName("ScalaForBigData")
   def run(
            @HttpTrigger(

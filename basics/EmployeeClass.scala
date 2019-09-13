@@ -4,4 +4,4 @@ object CaseClasses extends App{
           //println(emp.hashCode())
  }
 
- class Employee(firstName: String, lastName:String)
+ case class Employee(firstName: String, lastName:String)
