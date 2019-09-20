@@ -10,7 +10,7 @@ import scala.collection.JavaConversions._
 
 
 class Function {
-
+// to run: func host start
   @FunctionName("ScalaForBigData")
   def run(
            @HttpTrigger(

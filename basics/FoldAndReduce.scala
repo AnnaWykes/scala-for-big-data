@@ -17,9 +17,5 @@ object FoldAndReduce extends App {
         println(reduceLeftResult)
 
         println(List(1, 2, 3).foldLeft(0)(_ + _))
-        // ((0 + 1) + 2) + 3
-        // = 6
         println(List(1, 2, 3).foldRight(0)(_ + _))
-        // 1 + (2 + (3 + 0))
-        // = 6
 }
