@@ -1,9 +1,7 @@
 import java.time.Instant
 
 import org.scalatest.{FunSpec, Matchers}
-//import test.utils.ResourceReader
 
-//import scala.azure.function._
 
 class ParseTest extends FunSpec with Matchers {
 
