@@ -12,7 +12,7 @@ import scala.xml._
   //<firstname></firstname>
   //<lastname><lastname>
   //<age></age>
-//</emplyee>
+//</employee>
 
 class Parser() {
   // 'def apply(payload: String)' is a function that takes the xml (payload) as a string
@@ -21,9 +21,9 @@ class Parser() {
   //'for' in Scala is a good example of a Monad: if the population of xml, firstname, lastname or age fails the 'for' will return the result on the line it failed on  
   for {
       xml              <- parse(payload)
-      firstname        <- findIn(xml, fn => (fn >> "firstname").text)
-      lastname         <- findIn(xml, ln => (ln >> "lastname").text)
-      age              <- findIn(xml, ln => (ln >> "age").text.toInt)
+      firstname        <- findIn(xml, x => (x >> "firstname").text)
+      lastname         <- findIn(xml, x => (x >> "lastname").text)
+      age              <- findIn(xml, x => (x >> "age").text.toInt)
     } 
     //yield returns the end result if nothing failed in the for Monad
     yield Employee(firstName = firstname,lastName = lastname, age = age)
