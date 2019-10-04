@@ -37,7 +37,7 @@ class Parser() {
 
      //'def tryWith[T]' a higher order function that will try to return the result of f : => T
      private def tryWith[T](toErrorMessage: Throwable => String)(f: => T): Either[Error, T] =
-    // 'Left' retuerns the left result (the error) over thew right
+    // 'Left' returns the left result (the error) over thew right
     // 'fold' flatterns the result
     // 'toEither' returns the result of 'Left'
      Try { f }.toEither.fold(e => Left(Error(toErrorMessage(e))), Right(_))
