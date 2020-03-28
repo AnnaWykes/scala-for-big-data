@@ -8,7 +8,6 @@ import com.microsoft.azure.functions._
 
 import scala.collection.JavaConversions._
 
-
 class Function {
 // to run: func host start
   @FunctionName("ScalaForBigData")
