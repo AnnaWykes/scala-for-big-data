@@ -18,7 +18,8 @@ class Parser() {
   // 'def apply(payload: String)' is a function that takes the xml (payload) as a string
   // 'Either[Error, Employee]': Either allows the 'for' to return either an 'Error' or 'Employee' 
   def apply(payload: String): Either[Error, Employee] =
-  //'for' in Scala is a good example of a Monad: if the population of xml, firstname, lastname or age fails the 'for' will return the result on the line it failed on  
+  //'for' in Scala is a good example of a Monad: if the population of xml, firstname, lastname or age 
+  //fails the 'for' will return the result on the line it failed on  
   for {
       xml              <- parse(payload)
       firstname        <- findIn(xml, x => (x >> "firstname").text)
