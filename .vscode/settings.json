@@ -3,5 +3,8 @@
     "azureFunctions.projectLanguage": "Java",
     "azureFunctions.projectRuntime": "~2",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.preDeployTask": "package"
+    "azureFunctions.preDeployTask": "package",
+    "files.watcherExclude": {
+        "**/target": true
+    }
 }
